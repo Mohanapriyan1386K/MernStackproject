@@ -17,12 +17,13 @@ import PersonIcon from "@mui/icons-material/Person";
 
 import { createUser, login } from "../../Service/Service";
 import CustomTextField from "../../component/CustomTextField";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import CustomButton from "../../component/CustomButton";
 
 type AuthTab = "login" | "signup";
 
 export default function AuthPage() {
+  const navigate = useNavigate();
   const token = localStorage.getItem("token");
   if (token) {
     return <Navigate to="/admin/dashboard" replace />;
@@ -63,7 +64,7 @@ export default function AuthPage() {
         toast.success(res?.data?.message || "Login success", {
           id: "login",
         });
-        window.location.href = "admin/dashboard";
+        navigate("/admin/dashboard", { replace: true });
       } catch (error) {
         toast.error(getErrorMessage(error, "Login failed"), { id: "login" });
       }
