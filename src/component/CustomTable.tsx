@@ -122,8 +122,6 @@ function CustomTable<T extends { _id?: string }>({
           </TableBody>
         </Table>
       </TableContainer>
-
-      {/* ✅ Fixed Pagination */}
       {showPagination && (
         <Box sx={{ borderTop: "1px solid #eee" }}>
           <TablePagination
