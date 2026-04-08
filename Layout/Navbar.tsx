@@ -12,12 +12,12 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#2874f0" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#099486" }}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
         
         {/* Logo */}
         <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-          Flipkart
+          ShopEase
         </Typography>
 
         {/* Search Bar */}

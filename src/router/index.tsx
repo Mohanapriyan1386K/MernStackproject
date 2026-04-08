@@ -15,6 +15,7 @@ import OrderMangement from "../screen/Admin/OrderMangement";
 import Settings from "../screen/Admin/Settings";
 import ProtectedRoute from "./ProtectedRoute";
 import Products from "../screen/Admin/Products"
+import UnderConstruction from "../component/UnderConstruction";
 
 const AppRouter = () => {
   return (
@@ -25,6 +26,18 @@ const AppRouter = () => {
           <Route element={<Subnavbar />}>
             <Route index element={<Home />} />
             <Route path="fashion" element={<Fashion />} />
+            <Route path="mobiles" element={<UnderConstruction/>} />
+            <Route path="beauty" element={<UnderConstruction />} />
+            <Route path="electronics" element={<UnderConstruction />} />
+            <Route path="home" element={<UnderConstruction />} />
+            <Route path="appliances" element={<UnderConstruction />} />
+            <Route path="toys-baby" element={<UnderConstruction />} />
+            <Route path="food-health" element={<UnderConstruction />} />
+            <Route path="auto-accessories" element={<UnderConstruction />} />
+            <Route path="two-wheeler" element={<UnderConstruction />} />
+            <Route path="sports" element={<UnderConstruction />} />
+            <Route path="books" element={<UnderConstruction />} />
+            <Route path="furniture" element={<UnderConstruction />} />
           </Route>
         </Route>
         <Route element={<ProtectedRoute/>} >
