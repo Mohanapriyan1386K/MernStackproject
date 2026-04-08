@@ -200,7 +200,7 @@ function UserMangement() {
   return (
     <>
       <PageHeader
-        title="User Mangment"
+        title="User Management"
         label1="Add User"
         handleClick={() => handleModalopen()}
       />

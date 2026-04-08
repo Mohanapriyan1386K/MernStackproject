@@ -55,6 +55,7 @@ export default function AuthPage() {
   const loginFormik = useFormik({
     initialValues: { email: "", password: "" },
     validationSchema: loginSchema,
+    validateOnMount: true,
     onSubmit: async (values) => {
       toast.loading("Signing in...", { id: "login" });
       try {
@@ -66,6 +67,7 @@ export default function AuthPage() {
         });
         navigate("/admin/dashboard", { replace: true });
       } catch (error) {
+        console.error("Login error:", error);
         toast.error(getErrorMessage(error, "Login failed"), { id: "login" });
       }
     },
@@ -194,6 +196,8 @@ export default function AuthPage() {
               fullWidth
               type="submit"
               variant="contained"
+              loading={loginFormik.isSubmitting}
+              disabled={!loginFormik.isValid || loginFormik.isSubmitting}
             />
           </form>
         ) : (
