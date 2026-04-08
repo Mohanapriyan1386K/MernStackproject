@@ -11,7 +11,7 @@ import CustomDropdown from "../../component/CustomDropdown";
 import CustomButton from "../../component/CustomButton";
 import type { Product } from "../../Type";
 
-function Product() {
+function Products() {
   const dispatch = useDispatch();
   const [productList, setProductList] = useState<Product[]>([]);
   const [page, setPage] = useState(0);
@@ -240,4 +240,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default Products;

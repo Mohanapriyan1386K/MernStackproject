@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TextField, InputAdornment, IconButton } from "@mui/material";
 import type { TextFieldProps } from "@mui/material";
-import { Label, Visibility, VisibilityOff } from "@mui/icons-material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 type Props = TextFieldProps & {
   name: string;

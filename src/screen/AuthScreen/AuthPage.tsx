@@ -4,7 +4,6 @@ import * as Yup from "yup";
 import toast, { Toaster } from "react-hot-toast";
 import {
   Box,
-  Button,
   Paper,
   Tab,
   Tabs,

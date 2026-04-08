@@ -14,7 +14,7 @@ import UserMangement from "../screen/Admin/UserMangement";
 import OrderMangement from "../screen/Admin/OrderMangement";
 import Settings from "../screen/Admin/Settings";
 import ProtectedRoute from "./ProtectedRoute";
-import Product from "../screen/Admin/Product";
+import Products from "../screen/Admin/Products"
 
 const AppRouter = () => {
   return (
@@ -31,7 +31,7 @@ const AppRouter = () => {
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<Navigate to="dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />
-            <Route  path="product" element={<Product/>}  />
+            <Route  path="product" element={<Products/>}  />
             <Route path="users" element={<UserMangement />} />
             <Route path="orders" element={<OrderMangement />} />
             <Route path="settings" element={<Settings />} />
